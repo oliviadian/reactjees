@@ -20,6 +20,7 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+  
 };
 
 function MyAppBar(props) {
@@ -31,13 +32,20 @@ function MyAppBar(props) {
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-          <Link to='/' >Home</Link>&nbsp;&nbsp;
+          <Typography variant="h6" color="inherit" className={classes.grow}>         
+          <Button color="inherit">
+            <Link style={{textDecoration: "none", color:"inherit" }} to="/home">Home</Link>
+          </Button>
+          <Button color="inherit">
+            <Link  style={{textDecoration: "none", color:"inherit"}} to="/profile">Profile</Link>
+          </Button>
+          <Button color="inherit">
+            <Link  style={{textDecoration: "none", color:"inherit"}} to="/portofolio">Portofolio</Link>
+          </Button>
+          <Button color="inherit">
+            <Link  style={{textDecoration: "none", color:"inherit"}} to="/contact">Contact</Link>
+          </Button>
           </Typography>
-          <Button color="inherit"><Link to='/home' >Home</Link>&nbsp;&nbsp;</Button>
-          <Button color="inherit"><Link to='/contact' >Contact</Link>&nbsp;&nbsp;</Button>
-          <Button color="inherit"><Link to='/portofolio' >Portofolio</Link>&nbsp;&nbsp;</Button>
-          <Button color="inherit"><Link to='/profile' >Profile</Link>&nbsp;&nbsp;</Button>
         </Toolbar>
       </AppBar>
     </div>
